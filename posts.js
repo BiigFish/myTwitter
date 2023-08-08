@@ -14,6 +14,34 @@ async function fetchData() {
                   <button id="${item.date}Button" class="text-blue-500 hover:text-blue-600">Show more</button>
                 </li>
             `;
+            document.addEventListener("DOMContentLoaded", function() {
+              const text = document.getElementById(item.date);
+              const toggleButton = document.getElementById(item.date + "Button");
+            
+              toggleButton.addEventListener("click", function() {
+                text.classList.toggle("line-clamp-3");
+            
+                if (text.classList.contains("line-clamp-3")) {
+                  toggleButton.textContent = "Show more";
+                } else {
+                  toggleButton.textContent = "Show less";
+                }
+              });
+            });
+            document.addEventListener("DOMContentLoaded", function() {
+              const text = document.getElementById(item.date);
+              const toggleButton = document.getElementById(item.date + "Button");
+            
+            
+              if (text) {
+                const lineHeight = parseInt(getComputedStyle(text).lineHeight);
+                const maxHeight = lineHeight * 3;
+                const actualHeight = text.offsetHeight;
+                if (actualHeight < maxHeight) {
+                  toggleButton.classList.add("hidden");
+                }
+              }
+            });
             dataList.appendChild(listItem);
         });
     } catch (error) {
