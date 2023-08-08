@@ -10,7 +10,7 @@ async function fetchData() {
             listItem.innerHTML = `
                 <li class="bg-gray-200 rounded-lg p-2">
                   <h2 class="font-bold text-sm text-red-400 italic">${item.date}</h2>
-                  <p id={item.date} class="transition-all	 duration-200 line-clamp-3">${item.text}</p>
+                  <p id="${item.date}" class="transition-all	 duration-200 line-clamp-3">${item.text}</p>
                   <button id="${item.date}Button" class="text-blue-500 hover:text-blue-600">Show more</button>
                 </li>
             `;
