@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTMX Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="htmx.min.js"></script>
+        <link href="output.css" rel="stylesheet">
+    </head>
+<body>
+    <h1 class="text-red-400 font-bold">Welcome to HTMX Website!</h1>
+    <button id="load-content" hx-get="/load-content">Load Content</button>
+    <div id="content"></div>
+</body>
+</html>
