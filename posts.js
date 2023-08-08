@@ -14,7 +14,7 @@ async function fetchData() {
                   <button id="${item.date}Button" class="text-blue-500 hover:text-blue-600">Show more</button>
                 </li>
             `;
-            document.addEventListener("DOMContentLoaded", function() {
+            dataList.appendChild(listItem);
               const text = document.getElementById(item.date);
               const toggleButton = document.getElementById(item.date + "Button");
             
@@ -26,12 +26,7 @@ async function fetchData() {
                 } else {
                   toggleButton.textContent = "Show less";
                 }
-              });
-            });
-            document.addEventListener("DOMContentLoaded", function() {
-              const text = document.getElementById(item.date);
-              const toggleButton = document.getElementById(item.date + "Button");
-            
+              });            
             
               if (text) {
                 const lineHeight = parseInt(getComputedStyle(text).lineHeight);
@@ -42,8 +37,7 @@ async function fetchData() {
                 }
               }
             });
-            dataList.appendChild(listItem);
-        });
+            
     } catch (error) {
         console.error('Error fetching or processing data:', error);
     }
