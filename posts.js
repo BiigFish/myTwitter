@@ -43,33 +43,3 @@ async function fetchData() {
     }
   }
   window.addEventListener('load', fetchData);
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  const title = document.getElementById("test2");
-  const toggleButton = document.getElementById("showMoreButton");
-
-  toggleButton.addEventListener("click", function() {
-    title.classList.toggle("line-clamp-3");
-
-    if (title.classList.contains("line-clamp-3")) {
-      toggleButton.textContent = "Show more";
-    } else {
-      toggleButton.textContent = "Show less";
-    }
-  });
-});
-document.addEventListener("DOMContentLoaded", function() {
-  const title = document.getElementById("test2");
-  const toggleButton = document.getElementById("showMoreButton");
-
-
-  if (title) {
-    const lineHeight = parseInt(getComputedStyle(title).lineHeight);
-    const maxHeight = lineHeight * 3;
-    const actualHeight = title.offsetHeight;
-    if (actualHeight < maxHeight) {
-      toggleButton.classList.add("hidden");
-    }
-  }
-});
