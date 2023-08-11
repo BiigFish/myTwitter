@@ -643,6 +643,11 @@ video {
   padding-right: 1rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -676,6 +681,11 @@ video {
   color: rgb(96 165 250 / var(--tw-text-opacity));
 }
 
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
 .text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
@@ -686,9 +696,9 @@ video {
   color: rgb(248 113 113 / var(--tw-text-opacity));
 }
 
-.text-blue-500 {
+.text-red-500 {
   --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -725,10 +735,6 @@ video {
 
 .duration-200 {
   transition-duration: 200ms;
-}
-
-.\[a-zA-Z\:\\-\] {
-  a-z-a--z: \-;
 }
 
 .hover\:text-blue-600:hover {
