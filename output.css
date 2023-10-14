@@ -447,10 +447,12 @@ a:hover {
 }
 
 .postText ul {
+  list-style-position: inside;
   list-style-type: disc;
 }
 
 .postText ol {
+  list-style-position: inside;
   list-style-type: decimal;
 }
 
@@ -664,6 +666,14 @@ a:hover {
 
 .resize {
   resize: both;
+}
+
+.list-decimal {
+  list-style-type: decimal;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .justify-between {
