@@ -13,6 +13,9 @@
     @apply list-decimal;
   }
   .postText blockquote {
-    @apply ml-2 pl-2 border-left-2 border-[#00A4EF] mr-4;
+    @apply ml-2 pl-2 border-l-2 border-[#00A4EF] mr-4;
+  }
+  .postText strong {
+    @apply font-semibold;
   }
 }

@@ -446,6 +446,27 @@ a:hover {
   text-decoration-line: underline;
 }
 
+.postText ul {
+  list-style-type: disc;
+}
+
+.postText ol {
+  list-style-type: decimal;
+}
+
+.postText blockquote {
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  border-left-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 164 239 / var(--tw-border-opacity));
+  padding-left: 0.5rem;
+}
+
+.postText strong {
+  font-weight: 600;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -577,6 +598,10 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -615,6 +640,10 @@ a:hover {
 
 .max-w-2xl {
   max-width: 42rem;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
 }
 
 .max-w-lg {
@@ -663,6 +692,20 @@ a:hover {
   border-width: 1px;
 }
 
+.border-l-2 {
+  border-left-width: 2px;
+}
+
+.border-\[\#00A4EF\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 164 239 / var(--tw-border-opacity));
+}
+
+.bg-blue-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -694,6 +737,10 @@ a:hover {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
 }
 
 .text-2xl {
