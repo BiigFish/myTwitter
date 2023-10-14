@@ -14,7 +14,7 @@ async function fetchData() {
                     <button onClick="copyFunction('https://x.ratnotebook.com#${item.date}')" class="bg-slate-100 rounded-full px-1 text-sm text-slate-600">share post</button>
                   </div>
                   <p class="text-xs italic text-gray-600">${item.date}</p>
-                  <div id="${item.date}LineClamp" class="transition-all duration-200 line-clamp-3 space-y-2">${item.text}</div>
+                  <div id="${item.date}LineClamp" class="postText transition-all duration-200 line-clamp-3 space-y-2">${item.text}</div>
                   <button id="${item.date}Button" class="text-blue-500 hover:text-blue-600">Show more</button>
                 </li>
             `;
