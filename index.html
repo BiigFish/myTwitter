@@ -11,6 +11,39 @@
     <h1 id="test" class="text-red-500 font-bold my-4">
       Welcome To My Random Thoughts
     </h1>
+
+    <button id="simpli-checkout-embed" type="button">Buy Tickets</button>
+
+    <!-- Include your simpli-modules.js script -->
+    <script src="https://simpli.events/embed/simpli-modules.js"></script>
+
+    <script type="text/javascript">
+      var exampleCallback = function () {
+        console.log("Successful Order!");
+      };
+
+      // Check if the SimpliModules script is loaded
+      var checkSimpliModulesLoaded = function (callback) {
+        if (window.SimpliModules) {
+          callback();
+        } else {
+          setTimeout(function () {
+            checkSimpliModulesLoaded(callback);
+          }, 100);
+        }
+      };
+
+      // Initialize the widget once SimpliModules is available
+      checkSimpliModulesLoaded(function () {
+        window.SimpliModules.createModule({
+          moduleType: "simpliCheckoutButton",
+          customURL: "092bb6",
+          modalTriggerElementId: "simpli-checkout-embed",
+          onOrderComplete: exampleCallback,
+        });
+      });
+    </script>
+
     <ul id="content"></ul>
     <script src="posts.js"></script>
   </body>
