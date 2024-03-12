@@ -12,37 +12,33 @@
       Welcome To My Random Thoughts
     </h1>
 
-    <button id="simpli-checkout-embed" type="button">Buy Tickets</button>
+    
+<button id="simpli-checkout-embed" type="button">Buy Tickets</button>
 
-    <!-- Include your simpli-modules.js script -->
-    <script src="https://simpli-git-embeds-rubydevco-s-team.vercel.app/embed/simpli-modules.js"></script>
+<script src="https://simpli-staging.vercel.app/embed/simpli-modules.js"></script>
 
-    <script type="text/javascript">
-      var exampleCallback = function () {
-        console.log("Successful Order!");
-      };
+<script type="text/javascript">
+var checkSimpliModulesLoaded = function(callback) {
+	if (window.SimpliModules) {
+		callback();
+	} else {
+		setTimeout(function() {
+			checkSimpliModulesLoaded(callback);
+		}, 100);
+	}
+};
 
-      // Check if the SimpliModules script is loaded
-      var checkSimpliModulesLoaded = function (callback) {
-        if (window.SimpliModules) {
-          callback();
-        } else {
-          setTimeout(function () {
-            checkSimpliModulesLoaded(callback);
-          }, 100);
-        }
-      };
-
-      // Initialize the widget once SimpliModules is available
-      checkSimpliModulesLoaded(function () {
-        window.SimpliModules.createModule({
-          moduleType: "simpliCheckoutButton",
-          customURL: "fc5ea9",
-          modalTriggerElementId: "simpli-checkout-embed",
-          onOrderComplete: exampleCallback,
-        });
-      });
-    </script>
+checkSimpliModulesLoaded(function() {
+	window.SimpliModules.createModule(
+	{
+		moduleType: 'simpliCheckoutButton',
+		customURL: 'fc5ea9',
+		modalTriggerElementId: 'simpli-checkout-embed',
+		environmentUrl: 'https://simpli-staging.vercel.app',
+	});
+});
+</script>
+            
 
     <ul id="content"></ul>
     <script src="posts.js"></script>
